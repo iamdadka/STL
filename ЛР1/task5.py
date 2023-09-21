@@ -24,20 +24,20 @@ while answer != 6:
     print("4. Всю информацию.")
     print("5. Покупка")
     print("6. Выход")
-    answer = int(input())
-    if answer == 1:
+    answer = input()
+    if answer == '1':
         for key, value in shop_toys.items():
             print(key, "-", value[0])
-    elif answer == 2:
+    elif answer == '2':
         for key, value in shop_toys.items():
             print(key, "-", value[1])
-    elif answer == 3:
+    elif answer == '3':
         for key, value in shop_toys.items():
             print(key, "-", value[2])
-    elif answer == 4:
+    elif answer == '4':
         for key, value in shop_toys.items():
             print(key, "-", value[0], "\nЦена: ", value[1], "\nКоличество: ", value[2], "\n")
-    elif answer == 5:
+    elif answer == '5':
         while answ != "n":
             print("Введите наименование товара или 'n' для завершения покупок")
             name = input()
@@ -60,4 +60,5 @@ while answer != 6:
             else:
                 print("Такого товара нет")
                 break
+
 
