@@ -51,7 +51,5 @@ def main():
         except Exception as error:
             print("Произошла ошибка:", str(error))
 
-
-if __name__ == '__main__':
     main()
 

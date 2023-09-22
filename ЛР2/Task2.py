@@ -26,12 +26,9 @@ def process_data(data):
         for char in data:
             char_count[char] = char_count.get(char, 0) + 1
 
-        most_common_char = max(char_count, key=char_count.get)
+        most_common_char = max(char_count, key = char_count.get)
 
         return most_common_char
-
-    else:
-        raise ValueError("Неподдерживаемый тип данных")
 
 list_data = [1, 2, 3, 4, 5, 0, 6, 7, 8, 9, 0]
 even_sum, modified_list = process_data(list_data)
