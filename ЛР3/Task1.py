@@ -6,15 +6,17 @@ with open('F1.txt', 'w') as f1:
         f1.write(line + '\n')
 
 with open('F1.txt', 'r') as f1, open('F2.txt', 'w') as f2:
-    for line in f1:
-        words = line.split()
-        if len(words) >= 2 and words[1] in line:
-            f2.write(line)
+    lines = f1.readlines()
+    if len(lines) > 0:
+        words = lines[0].split()
+        if len(words) >= 2:
+            target_word = words[1]
+            matching_lines = [line for line in lines if target_word in line]
+            f2.writelines(matching_lines)
 
-if f2.__sizeof__() != 0:
-    with open('F2.txt', 'r') as f2:
-        last_line = f2.readlines()[-1]
-        digit_count = sum(1 for char in last_line if char.isdigit())
-    print("Количество цифр в последней строке файла F2:", digit_count)
-else:
-    print("Файл 2 пустой")
+with open('F2.txt', 'r') as f2:
+    lines = f2.readlines()
+    last_line = lines[-1].strip()
+    digit_count = sum(c.isdigit() for c in last_line)
+
+print("Количество цифр в последней строке файла F2:", digit_count)
