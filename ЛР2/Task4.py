@@ -3,9 +3,9 @@ def divide_numbers(a, b):
         result = a / b
         print("Результат деления:", result)
     except ZeroDivisionError:
-        print("Ошибка: Деление на ноль")
+        print("Ошибка деление на ноль")
     finally:
-        print("Блок finally: выполняется всегда")
+        print("Блок finally выполняется всегда")
 
 divide_numbers(10, 2)
 

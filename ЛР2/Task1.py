@@ -14,13 +14,14 @@ def divide(a, b):
     try:
         result = a / b
     except ZeroDivisionError:
+        print("Делить на ноль нельзя")
         return
     return result
 
 
 def main():
     while True:
-        operation = input("Введите операцию (+, -, *, /) или '0' для выхода: ")
+        operation = input("Введите операцию +, -, *, / или '0' для выхода: ")
 
         if operation == '0':
             break
@@ -41,15 +42,11 @@ def main():
                 result = multiply(num1, num2)
             elif operation == '/':
                 result = divide(num1, num2)
-            else:
-                raise ValueError("Некорректная операция")
 
             print("Результат:", result)
 
-        except ValueError as error:
-            print("Ошибка:", str(error))
-        except Exception as error:
-            print("Произошла ошибка:", str(error))
+        except ValueError:
+            print("Неверный тип данных")
 
-    main()
+main()
 
