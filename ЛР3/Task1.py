@@ -16,7 +16,7 @@ with open('F1.txt', 'r') as f1, open('F2.txt', 'w') as f2:
 
 with open('F2.txt', 'r') as f2:
     lines = f2.readlines()
-    last_line = lines[-1].strip()
+    last_line = lines[len(lines)-1].strip()
     digit_count = sum(c.isdigit() for c in last_line)
 
 print("Количество цифр в последней строке файла F2:", digit_count)
