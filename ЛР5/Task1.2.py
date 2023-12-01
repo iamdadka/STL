@@ -1,5 +1,5 @@
 import numpy as np
-X_col2 = np.arange(16, 28)
+X_col2 = np.arange(30, 42)
 X_col3 = np.random.randint(60, 83, size=12)
 Y = np.random.uniform(13.5, 18.6, size=12)
 

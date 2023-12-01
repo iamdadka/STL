@@ -1,4 +1,6 @@
 import numpy as np
-x = 2.57*(10**3)
-f = 0.873
-print(((np.sin(np.pi-f))**2+(3+x**2)**0.25)/2)
+x = 0.3
+a = 756.13
+print(np.cos(x ** 2 + np.pi / 6) ** 5
+    - (x * a ** 3) ** 0.5
+    - np.log(np.abs((a - 1.12 * x) / 4)))
